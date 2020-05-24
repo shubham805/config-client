@@ -9,7 +9,7 @@ ARG libpq_dev_version
 WORKDIR /code
 
 # hadolint ignore=DL3008,DL3015
-RUN apt-get update && \ 
+RUN apt-get update && \
     # installing basic tool chain
     apt-get -y install git procps curl vim net-tools
 
@@ -42,6 +42,6 @@ RUN apt-get update && \
 COPY --from=builder /code/ .
 COPY . .
 
-WORKDIR /code/user
+WORKDIR /code
 
 ENV PATH="/code/venv/bin:$PATH"

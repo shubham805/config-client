@@ -33,7 +33,7 @@ class GetConfig(Resource):
 
 class ConfigStore(object):
     def __init__(self, store_client=None):
-        self._store_client = redis.Redis(host='localhost', port=6379, db=0)
+        self._store_client = redis.Redis(host='redis_server', port=6379, db=0)
 
     def get(self, key):
         value = self.__get(key)

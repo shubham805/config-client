@@ -1,2 +1,4 @@
 flask_restful
 jsonpath-ng
+redis
+flask
